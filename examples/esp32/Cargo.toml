@@ -1,0 +1,9 @@
+[dependencies]
+xgzp6897d = "0.1.0"
+embedded-hal = "1.0.0"
+esp-idf-svc = { version = "0.49", default-features = false, features = ["alloc", "embassy-sync"] }
+
+[features]
+default = ["sync"]
+sync = []
+

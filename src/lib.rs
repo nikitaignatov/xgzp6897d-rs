@@ -6,7 +6,8 @@ pub type Response = [u8; 5];
 pub type PressureBytes = [u8; 3];
 pub type TemperatureBytes = [u8; 2];
 
-#[derive(Debug, Default)]
+
+#[derive(Debug)]
 pub struct XGZP6897D<I2C> {
     i2c: I2C,
     address: u8,
@@ -39,7 +40,7 @@ impl<I2C: I2c> XGZP6897D<I2C>
         match self.read_sensor_raw() {
             Ok([pressure @ .., msb, lsb]) => {
                 let temp = bytes_to_u16([msb, lsb]) as f32 / (256f32);
-                let pressure_raw = bytes_to_i32(pressure) as f32 / self.conversion_factor;
+                let pressure_raw = bytes_to_i32(pressure) as f32 / &self.conversion_factor;
                 Ok((pressure_raw, temp))
             }
             Err(error) => Err(error),

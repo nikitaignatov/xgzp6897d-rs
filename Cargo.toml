@@ -6,7 +6,7 @@ authors = ["Nikita Ignatov <nikita@ignatov.com>"]
 homepage = "https://github.com/nikitaignatov/xgzp6897d-rs"
 repository = "https://github.com/nikitaignatov/xgzp6897d-rs"
 description = "i2c Driver for the XGZP6807D differential pressure sensor."
-license = "MIT OR Apache-2.0"
+license = "MIT"
 keywords = [
     "xgzp6897d",
     "pressure",
@@ -14,6 +14,7 @@ keywords = [
     "i2c",
     "pitot"
 ]
+
 categories = ["embedded", "no-std", "hardware-support"]
 
 [lib]
@@ -25,3 +26,6 @@ embedded-hal = "1.0.0"
 [features]
 default = ["sync"]
 sync = []
+
+[[example]]
+name = "esp32"
