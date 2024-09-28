@@ -1,3 +1,5 @@
+#![no_std]
+
 use embedded_hal::i2c::{I2c};
 
 pub type Pressure = f32;

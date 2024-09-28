@@ -1,6 +1,6 @@
 [package]
 name = "xgzp6897d"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Nikita Ignatov <nikita@ignatov.com>"]
 homepage = "https://github.com/nikitaignatov/xgzp6897d-rs"
